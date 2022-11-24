@@ -1,0 +1,10 @@
+<p class="mt-4">
+    Product Name is <strong>{{product?.Pname}}</strong>
+</p>
+<p>
+    Product ID is <strong>{{product?.Pid}}</strong>
+</p>
+<p>
+    Product Status is <strong>{{product?.Pstatus}}</strong>
+</p>
+<button class="btn btn-primary" [routerLink]="['/products', product?.Pid, 'Edit']">Edit Product</button>

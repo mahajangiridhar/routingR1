@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let product of products" [class.active]="product.Pid === activeId" [routerLink]="['/products', product.Pid]" (click)="activeId = product.Pid" [queryParams]="{query:product.CanEdit}">
+                {{product.Pname}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <!-- <app-edit-product></app-edit-product>
+        <app-product></app-product> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

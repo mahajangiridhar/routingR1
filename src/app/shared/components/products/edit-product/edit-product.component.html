@@ -1,0 +1,16 @@
+
+<div class="form-group">
+    <label for="pName">Product Name</label>
+    <input type="text" class="form-control" [value]="product?.Pname">
+</div>
+<div class="form-group">
+    <label for="pStatus">Product Status</label>
+    <select name="pStatus" id="pStatus" class="form-control" [value]="product?.Pstatus">
+        <option value="In Progress">In Progress</option>
+        <option value="Dispatched">Dispatched</option>
+        <option value="Delivered">Delivered</option>
+    </select>
+</div>
+<button class="btn btn-primary">Update product</button>
+<button class="btn btn-primary ml-2" (click)="gotoUsers()">Go to Users</button>
+<a class="btn btn-link" [routerLink]="['/users']">Go To Users</a>
